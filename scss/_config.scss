@@ -1,0 +1,14 @@
+$primary-color: rgb(199, 198, 198);
+$secondary-color: #d341c7;
+
+@mixin easeOut {
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+@mixin menuSpin {
+    -webkit-transition-duration: 1.5s;
+    transition-duration: 1.5s;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
