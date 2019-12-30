@@ -7,7 +7,8 @@
 body {
   font-size: 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: black; }
+  background: black;
+  color: black; }
 
 #title {
   text-align: center;
@@ -38,7 +39,9 @@ body {
   background-color: white;
   height: 500px;
   width: 400px;
-  margin-top: 50px; }
+  margin-top: 50px;
+  color: #4b3c3c;
+  font-size: 2rem; }
   .box#player {
     float: left;
     margin-left: 20px; }
@@ -58,3 +61,9 @@ body {
       top: 20px;
       border: 3px darkred solid;
       border-radius: 20%; }
+      .box .avatar img:hover {
+        cursor: pointer;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-transform: scaleX(1.05);
+        transform: scaleX(1.05); }

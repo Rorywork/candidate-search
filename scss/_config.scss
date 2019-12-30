@@ -6,6 +6,14 @@ $secondary-color: #d341c7;
     transition: all 0.5s ease-out;
 }
 
+@mixin pulse {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: scaleX(1.05);
+            transform: scaleX(1.05);
+
+}
+
 @mixin menuSpin {
     -webkit-transition-duration: 1.5s;
     transition-duration: 1.5s;

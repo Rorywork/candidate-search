@@ -1,45 +1,83 @@
 const player = document.getElementById("player");
 const boss = document.getElementById("boss");
 const startGameBtn = document.getElementById("start-game-btn");
-let gameState = 0;
+let bossState = 0;
+let playerState = 0;
 let text = ""
 
-function playGame() {
-    console.log("playGame function is working");
-    console.log(gameState);
-    contentCreator();
-    boss.appendChild(content);
-    gameState++;
-    contentCreator();
-    player.appendChild(content);
+const questions = {
+    name: "What is your name?",
+    age: "How old are you?",
+    fave_lang: "What is your favourite programming language?"
+};
 
 
+const responses = {
+    name: "My name is Rory Lindsay",
+    age: "I am 24 years old.",
+    fave_lang: "I would say my favorite language at the moment is Python"
 }
 
+
+// Turns on the Game
 function turnOn() {
-    gameState = 0;
     startGameBtn.classList.add("hide");
     player.classList.remove("hide");
     boss.classList.remove("hide");
-    gameState++;
-    playGame();
+
 }
 
 
-function contentCreator() {
-    if (gameState == 0) {
-        text = "";
+function bossButton() {
+    console.log("Hello")
+    bossControl();
+    boss.appendChild(content);
+}
 
-    } else if (gameState == 1) {
-        text = "Hello and welcome to the interview.";
+function playerButton() {
+    console.log("Hello")
+    playerControl();
+    player.appendChild(content);
+    bossState++;
+    playerState++;
+}
 
-    } else if (gameState == 2) {
-        text = "Hello Thank you great to be here deekheadfam";
-    } else if (gameState == 3) {
-        text = "gs3";
-    } else if (gameState == 4) {
-        text = "gs4";
-    }
+function speech() {
     content = document.createTextNode(text);
     return;
+}
+
+function bossControl() {
+    if (bossState == 0) {
+        text = questions.name;
+        speech();
+
+
+    } else if (bossState == 1) {
+        text = questions.age;
+        speech();
+
+
+    } else {
+        text = questions.fave_lang;
+        speech();
+
+    }
+}
+
+function playerControl() {
+    if (playerState == 0) {
+        text = responses.name;
+        speech();
+
+
+    } else if (playerState == 1) {
+        text = responses.age;
+        speech();
+
+
+    } else {
+        text = responses.fave_lang;
+        speech();
+    }
 }

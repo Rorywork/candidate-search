@@ -16,19 +16,20 @@
     <main>
         <h1 class="show" id="title"></h1>
         <button onclick=turnOn() id="start-game-btn">Start Game</button>
-        <!-- <button onclick=selectText()>Start Game</button> -->
+
 
         <div class="box hide" id="player">
 
             <div class="avatar" id="player-img">
-                <img class="avatar-img" src="img/player.jpg" alt="Player">
+                <img onclick=playerButton() class="avatar-img" src="img/player.jpg" alt="Player">
+
             </div>
 
         </div>
         <div class="box hide" id="boss">
 
             <div class="avatar" id="boss-img">
-                <img class="avatar-img" src="img/boss.jpg" alt="Boss">
+                <img onclick=bossButton() class="avatar-img" src="img/boss.jpg" alt="Boss">
             </div>
         </div>
 
